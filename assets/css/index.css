@@ -1,0 +1,625 @@
+@font-face {
+    font-family: 'Iceland';
+    src: url('../font/Iceland-Regular.ttf') format('truetype');
+}
+
+body {
+
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    overflow-x: hidden;
+    background: url('../img/gta_decors1.jpg') center center fixed no-repeat;
+    /* cover->la photo va prendre toute la place*/
+    background-size: cover;
+    /* Masque la barre de défilement horizontale */
+
+}
+
+/*--------------------Header.php -----------------*/
+
+/* marge droite par rapport à logo*/
+
+.navbar-brand {
+    margin-right: 15rem;
+}
+
+.cc-navbar {
+    background-color: rgba(0, 0, 0, 0.55);
+    font-family: 'Iceland';
+    font-size: 1.5rem;
+    /*rajouter une ligne blanche sur le bas de nav*/
+    box-shadow: 1px 1px rgba(255, 255, 255, 0.54);
+
+    /* pour mettre la nav au dessus au moment du scrol*/
+    z-index: 99;
+}
+
+/* effet sur les menu*/
+
+.cc-navbar .nav-link {
+    /* Ajout ligne en dessous mais transparent jusqu'à hover*/
+    border-bottom: 1px solid transparent;
+    transition: padding-bottom .4s ease-in-out, border-color .3s ease;
+}
+
+.cc-navbar .nav-link:hover {
+    padding-bottom: 15px;
+    /* border bottom devient vert*/
+    border-bottom-color: var(--bs-teal);
+}
+
+/*la taille de la petite maison menu Home*/
+.img-home {
+    /* width: 130%; desktop */
+    position: relative;
+    margin-top: 4vh;
+    width: 10%
+}
+
+/* logo starIsland menu gauche*/
+.logo {
+    position: absolute;
+    width: 30%;
+    top: 3%;
+    left: 0.2%;
+}
+
+/* tutoriel et event menu*/
+.vector {
+    margin-bottom: -2%;
+}
+
+.event {
+    bottom: 10%;
+    position: relative;
+}
+
+.tuto {
+    position: relative;
+    bottom: -15%;
+
+}
+
+.tuto img,
+.event img {
+    margin-right: 10%;
+    width: 1.5rem;
+    height: 1.5rem;
+    ;
+}
+
+.tuto p,
+.event p {
+    color: white;
+    font-size: 1rem;
+}
+
+/*------------------------------------*/
+/*-------------Index.php---------------*/
+/*------------------------------------*/
+
+/*les fonds des sections index.php*/
+
+.banner {
+    position: absolute;
+    top: 0;
+    left: 0;
+    /* fixer et centrer la photo */
+    /* h500 -> ajouter une hauter de 500px*/
+    height: 600px;
+    width: 100%;
+
+}
+
+
+/* les titres*/
+
+.titre {
+    position: relative;
+    top: -20vh;
+}
+
+
+/*---------------Section 2-------------*/
+/* Carousel*/
+
+#carouselExampleCaptions {
+    margin-top: 3%;
+}
+
+
+
+/*---------------Section 3-------------*/
+.top img {
+    height: 20%;
+    margin-right: 5%;
+}
+
+/*T et P du TOP*/
+.top span {
+    color: orangered;
+    font-weight: bold;
+    font-size: 1rem;
+}
+
+.top h1 {
+    margin-left: 10px;
+}
+
+.top p {
+    color: black;
+    font-weight: bold;
+    font-size: 1rem;
+
+}
+
+.titre_sec3 {
+    position: relative;
+    top: 10vh;
+    color: white;
+
+}
+
+/* class sur <p> votre avis nous interresse et star island*/
+
+.star {
+
+    color: rgb(233, 231, 231);
+    font-weight: bold;
+
+}
+
+/* text area votre commentaire*/
+.message,
+.comment {
+    border-radius: 0.9rem;
+
+    width: 75%;
+
+}
+
+/* etoile votre commentaire*/
+.etoile img {
+    margin-right: 1rem;
+    width: 3vh;
+}
+
+
+/* Opacity des sections et les o*/
+#section2,
+#section3 {
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+
+#section1 {
+    opacity: 1;
+    transition: opacity 0.3s ease-in-out;
+}
+
+#rond1 {
+    color: white;
+}
+
+#rond2,
+#rond3 {
+    color: red;
+}
+
+/* position de la navigation des section o*/
+.navigation {
+    position: absolute;
+    top: 600px;
+    left: 0;
+    width: 100%;
+
+}
+
+.etoile_avis img {
+    margin-right: 1rem;
+    width: 3vh;
+}
+
+/*--------------ecart entre les 2*/
+
+/* .bas {
+    width: 100%;
+    padding: 2px;
+  }
+  
+  .navigation, .reseauSociaux {
+    margin-top: 15px;
+  } */
+
+/*---------------------------------------*/
+/* -----------Reseaux sociaux------------*/
+
+
+
+#reseaux-sociaux img {
+    position: absolute;
+    bottom: -10vh;
+    left: 45vw;
+    transition: all 2s;
+}
+
+.box {
+    display: flex;
+}
+
+#checkbox {
+    width: 3.125rem;
+    height: 3.125rem;
+    appearance: none;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    cursor: pointer;
+    outline: none;
+    position: relative;
+}
+
+#checkbox:hover,
+.menu .menuItems:hover {
+    background: transparent;
+}
+
+#checkbox::before {
+    /* code dans checkbox et fontawesone*/
+    content: url('../img/discord.png');
+    font-family: 'fontawesone 5 free';
+    font-weight: 700;
+    font-size: 1.5rem;
+    position: absolute;
+    background: transparent;
+    /*centré*/
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: rgb(41, 41, 41);
+    transition: all 1.5s;
+}
+
+#checkbox:checked::before {
+    content: url('../img/fermer.png');
+    background: transparent;
+
+}
+
+/*afficher menu*/
+.menu {
+    width: 0;
+    overflow: hidden;
+    display: flex;
+    transition: all .5s;
+}
+
+.menu .menuItems {
+    width: 50px;
+    height: 50px;
+    background: transparent;
+    /*border-left: 1px solid rgb(165, 165, 165);*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/*~ le menu va afficher*/
+#checkbox:checked~.menu {
+    width: 306px;
+    /* 6*50 +6*1 bordure*/
+}
+
+.menu .menuItems i {
+    font-size: 1.8rem;
+}
+
+.fa-whatsapp {
+    color: #25d366;
+}
+
+.fa-instagram {
+    color: #c32aa3;
+}
+
+.fa-facebook {
+    color: #4e869d;
+}
+
+.fa-twitter {
+    color: #1da1f2;
+}
+
+.fa-linkedin {
+    color: #25d366;
+}
+
+.fa-discord {
+    color: #cb4cd4;
+}
+
+
+/* section Avis decalage du à la position absolue des section1,2,3*/
+
+.avis {
+
+    margin-top: 910px;
+    position: relative;
+    top: -30vh;
+}
+
+.bloc {
+    width: 300px;
+}
+
+/*-------------Avis------------*/
+.rep {
+    border-top-left-radius: 1.5rem;
+    border-top-right-radius: 1.5rem;
+    border-bottom-right-radius: 1.5rem;
+}
+
+/**/
+.rep1 {
+    border-top-left-radius: 1.5rem;
+    border-top-right-radius: 1.5rem;
+    border-bottom-left-radius: 1.5rem;
+}
+
+#rep2 {
+    position: relative;
+    top: 3rem;
+}
+
+#rep3 {
+    position: relative;
+    top: 3rem;
+}
+
+#rep4 {
+    position: relative;
+    top: 5rem;
+}
+
+/*--------------------------------------*/
+/*-------------FIN index.php------------*/
+
+
+
+/*--------------galerie.php--------------*/
+/*---------------------------------------*/
+
+/*centrés le titre avec un top car le nav est absolute */
+
+.titre-page {
+    position: absolute;
+    top: 13vh;
+    left: 50%;
+    transform: translateX(-50%);
+
+}
+
+/*----------carrousel galerie-----------*/
+
+#slider {
+    position: relative;
+    border: 2px solid red;
+    top: 15vh;
+    /*Rien desktop*/
+    /* width: 40%;
+    height: 22vw;  desktop*/
+    width: 50%;
+    height: 32vw;
+
+    margin: 150px auto;
+    font-family: 'Helvetica Neue', sans-serif;
+    perspective: 1400px;
+    transform-style: preserve-3d;
+}
+
+input[type=radio] {
+    position: relative;
+    top: 108%;
+    left: 50%;
+    width: 18px;
+    height: 18px;
+    margin: 0 15px 0 0;
+    opacity: 0.4;
+    transform: translateX(-83px);
+
+}
+
+
+input[type=radio]:nth-child(5) {
+    margin-right: 0px;
+}
+
+input[type=radio]:checked {
+    opacity: 1;
+}
+
+
+#slider label,
+#slider label img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    color: white;
+    font-size: 70px;
+    font-weight: bold;
+    border-radius: 3px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 400ms ease;
+    cursor: pointer;
+}
+
+
+
+/* Slider Functionality */
+
+/* Active Slide */
+#s1:checked~#slide1,
+#s2:checked~#slide2,
+#s3:checked~#slide3,
+#s4:checked~#slide4,
+#s5:checked~#slide5 {
+    box-shadow: 0 13px 26px rgba(0, 0, 0, 0.3), 0 12px 6px rgba(0, 0, 0, 0.2);
+    transform: translate3d(0%, 0, 0px);
+}
+
+/* Next Slide */
+#s1:checked~#slide2,
+#s2:checked~#slide3,
+#s3:checked~#slide4,
+#s4:checked~#slide5,
+#s5:checked~#slide1 {
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.3), 0 2px 2px rgba(0, 0, 0, 0.2);
+    transform: translate3d(20%, 0, -100px);
+}
+
+
+/* Next to Next Slide */
+#s1:checked~#slide3,
+#s2:checked~#slide4,
+#s3:checked~#slide5,
+#s4:checked~#slide1,
+#s5:checked~#slide2 {
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.4);
+    transform: translate3d(40%, 0, -250px);
+}
+
+/* Previous to Previous Slide */
+#s1:checked~#slide4,
+#s2:checked~#slide5,
+#s3:checked~#slide1,
+#s4:checked~#slide2,
+#s5:checked~#slide3 {
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.4);
+    transform: translate3d(-40%, 0, -250px);
+}
+
+/* Previous Slide */
+#s1:checked~#slide5,
+#s2:checked~#slide1,
+#s3:checked~#slide2,
+#s4:checked~#slide3,
+#s5:checked~#slide4 {
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.3), 0 2px 2px rgba(0, 0, 0, 0.2);
+    transform: translate3d(-20%, 0, -100px);
+}
+
+/*----------fin carrousel-----------------/
+/*----------carrousel galerie-----------*/
+/*--------------FIN galerie.php----------*/
+
+
+/* -------------------VIP.php---------------*/
+/*-----------------------------------------*/
+
+/* centré le container absolute du à la nav*/
+.titreCentre {
+    position: absolute;
+    top: 20vh;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/*---------VIP-----------*/
+
+/* Les 2 personnages*/
+
+
+#vipG {
+    position: relative;
+    bottom: 2vh;
+}
+
+#vipD {
+    position: relative;
+
+}
+
+/*-----------------VIP-----------------*/
+/*----------------FIN vip.php----------------*/
+
+
+
+
+
+/*--------------------Equipe.php--------------------*/
+/*-------------------------------------------------*/
+/*centrés le titre avec un top car le nav est absolute */
+
+/*titre-page => galerie*/
+/* titre-centre */
+
+/*---------------------------------------*/
+/*--------------FIN Equipe------------------*/
+
+
+/*-------------------------------------------*/
+/*-----------------evenement.php-------------*/
+
+/*titreCentre => VIP*/
+
+#prison {
+    width: 50%;
+}
+
+/*---------------------------------------*/
+/*--------------FIN Evenement------------------*/
+
+/*--------footer-----------*/
+.footer {
+    /* position: relative;
+    bottom: 0; */
+    margin-top: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.55);
+
+}
+
+.right {
+    /*auto desktop*/
+    margin-right: -12vw;
+}
+
+.footer .right img {
+    /*width: 30%; desktop*/
+    width: 25%;
+}
+
+.left {
+    position: relative;
+    top: 1vh;
+}
+
+.footer .left {
+
+    margin: 0.5rem;
+    display: flex;
+}
+
+.footer .left p {
+    font-size: 1rem;
+    color: white;
+}
+
+.footer .left img {
+    width: 1.5rem;
+    height: 1.5rem;
+    margin-right: 0.5rem;
+    background: transparent;
+    border: 1px solid orangered;
+}
+
+
+/*------ FIN footer-----------*/
