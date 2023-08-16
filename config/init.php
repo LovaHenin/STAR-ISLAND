@@ -13,12 +13,12 @@ const CONFIG=[
 
     ],
     'app'=>[
-        'name'=>'STAR_ISLAND',
-        'projecturl'=>'https://localhost/STAR_ISLAND'
+        'name'=>'STAR-ISLAND',
+        'projecturl'=>'https://localhost/STAR-ISLAND'
     ]
 
 ];
 
 
 
-const BASE_PATH='/star_island/';
+const BASE_PATH='/star-island/';

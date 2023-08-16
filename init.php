@@ -7,7 +7,7 @@ const CONFIG=[
     'db'=>[
         'HOST'=>'localhost',
         'PORT'=>'3306',
-        'NAME'=>'star-island',
+        'NAME'=>'star_island',
         'USER'=>'root',
         'PWD'=>''
 
@@ -19,5 +19,5 @@ const CONFIG=[
 
 ];
 
-const BASE_PATH='/star-island';
+const BASES_PATH='/star-island/';
 

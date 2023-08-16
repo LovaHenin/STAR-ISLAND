@@ -146,7 +146,7 @@ if (!connect()){
 
             <hr class="sidebar-divider">
             <li class="nav-item">
-            <a class="nav-link" href="<?= BASE_PATH . 'front/'; ?>">
+            <a class="nav-link" href="<?= BASE_PATH . ''; ?>">
                     <i class="fas fa-fw fa-wrench"></i>
                     <span>Déconnexion</span>
                 </a>

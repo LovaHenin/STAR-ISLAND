@@ -64,11 +64,11 @@ if (!empty($_GET) && isset($_GET['id']) && isset($_GET['a']) && $_GET['a'] == 'e
 require_once '../inc/backheader.inc.php';
 ?>
 
-
+   <h1>Changer mot de passe</h1>
     <form action="" method="post" class="w-75 mx-auto mt-5 mb-5">
         <div class="form-group">
             <small class="text-danger">*</small>
-            <label for="mdp" class="form-label">Mot de passe</label>
+            <label for="mdp" class="form-label">Cliquer sur "Modifier"</label>
             <input name="mdp" id="mdp"  type="text"
                    value="<?= $mp['mdp'] ?? ''; ?>" class="form-control">
             <small class="text-danger"><?= $error ?? ''; ?></small>
